@@ -1,0 +1,28 @@
+.product_row {
+ width:94%;
+ height:70px;
+ background-color:#ffbcbc7c;
+ padding:6px 0;
+ position:relative;
+ left:50%;
+ transform:translateX(-50%);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ gap:19px;
+ direction:rtl;
+ cursor: pointer;
+ border-radius:5px;
+}
+.product_prop {
+ width:13%;
+ height:60px;
+ color:white;
+ border-radius:8px;
+ background-color: #ff4545;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ font-size:26px;
+ font-weight:300
+}

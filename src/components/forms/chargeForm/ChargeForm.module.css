@@ -1,0 +1,70 @@
+.charge_form {
+ display:flex;
+ flex-direction:column;
+ gap:21px;
+}
+.charge_form .charge_inp,
+.product_container .product_inp {
+ width:766px;
+ height:52px;
+ padding: 10px;
+ border-radius:5px;
+ border:.5px solid #514efa;
+ background-color: rgb(227, 225, 253);
+ transition-duration: .3s;
+ font-family:"Zain";
+ direction: rtl;
+}
+.product_container {
+ width:766px;
+ height:52px;
+ padding:10px;
+ border-radius:5px;
+ border:.5px solid #1705b89a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap:16px;
+ direction:rtl;
+}
+
+.add_ico {
+ cursor:pointer;
+ transition-duration: .34s;
+ position:relative;
+ left:-8px;
+}
+
+.add_ico:hover {
+ color:#948aff
+}
+
+.product_container .product_inp {
+ width:240px;
+ height: 30px;
+}
+.product_container select {
+ height:50px !important;
+}
+
+.product_container .product_inp:focus,
+.charge_form .charge_inp:focus{
+ outline:none;
+ border-color:#2005b8
+}
+.charge_but {
+ width:788px;
+ height:52px;
+ padding:10px;
+ color:white;
+ font-family: 'Zain';
+ border-radius:5px;
+ font-size:18px;
+ background-color:#4845ff;
+ border:none;
+ transition-duration:.3s;
+}
+.charge_but:hover {
+ background-color: #3517df;
+ cursor:pointer;
+}

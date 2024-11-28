@@ -1,0 +1,58 @@
+.offer_form {
+ display:flex;
+ flex-direction:column;
+ gap:21px;
+}
+.offer_form .offer_inp,
+.product_container .product_inp {
+ width:766px;
+ height:52px;
+ padding: 10px;
+ border-radius:5px;
+ border:.5px solid #fa4e4e;
+ background-color: rgb(253, 225, 225);
+ transition-duration: .3s;
+ font-family:"Zain";
+ direction: rtl;
+}
+.product_container {
+ width:766px;
+ height:52px;
+ padding:10px;
+ border-radius:5px;
+ border:.5px solid #b805059a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap:16px;
+ direction:rtl;
+}
+.product_container .product_inp {
+ width:240px;
+ height: 30px;
+}
+.product_container select {
+ height:50px !important;
+}
+
+.product_container .product_inp:focus,
+.offer_form .offer_inp:focus{
+ outline:none;
+ border-color:#b80505
+}
+.offer_but {
+ width:788px;
+ height:52px;
+ padding:10px;
+ color:white;
+ font-family: 'Zain';
+ border-radius:5px;
+ font-size:18px;
+ background-color:#ff4545;
+ border:none;
+ transition-duration:.3s;
+}
+.offer_but:hover {
+ background-color: #df1717;
+ cursor:pointer;
+}

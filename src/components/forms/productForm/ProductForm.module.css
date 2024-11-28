@@ -1,0 +1,37 @@
+.product_form {
+ display:flex;
+ flex-direction:column;
+ gap:21px;
+}
+.product_form .product_inp {
+ width:766px;
+ height:52px;
+ padding: 10px;
+ border-radius:5px;
+ border:.5px solid #fa4e4e;
+ background-color: #ffe7e7;
+ transition-duration: .3s;
+ font-family:"Zain";
+ direction: rtl;
+}
+
+.product_form .product_inp:focus{
+ outline:none;
+ border-color:#b80505
+}
+.product_but {
+ width:788px;
+ height:52px;
+ padding:10px;
+ color:white;
+ font-family: 'Zain';
+ border-radius:5px;
+ font-size:18px;
+ background-color:#ff4545;
+ border:none;
+ transition-duration:.3s;
+}
+.product_but:hover {
+ background-color: #df1717;
+ cursor:pointer;
+}

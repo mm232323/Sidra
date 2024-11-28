@@ -1,0 +1,27 @@
+.model {
+ background-color: white;
+ border-radius:44px;
+ padding:30px;
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:max-content;
+ height:max-content;
+ z-index:101
+}
+.ico {
+ margin-bottom: 15px;
+ cursor:pointer;
+}
+.back_shadow  {
+ position:absolute;
+ display:fixed;
+ background-color: rgba(0,0,0,0.3);
+ backdrop-filter: blur(7px);
+ width: 100%;
+ height:100%;
+ z-index:100;
+ left:0;
+ top:0;
+}

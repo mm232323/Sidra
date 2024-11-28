@@ -1,0 +1,18 @@
+.props_header {
+ width:89.0972222222%;
+ height:60px;
+ border-radius:5px;
+ background-color:#ffcdcd;
+ position:relative;
+ left:50%;
+ transform:translateX(-50%);
+ display:flex;
+ justify-content: space-around;
+ align-items: center;
+ direction:rtl;
+ margin-bottom: 15px;
+}
+.props_header h3 {
+ font-size:18px;
+ font-weight:300;
+}

@@ -1,0 +1,28 @@
+.charge_row {
+ width:60%;
+ height:70px;
+ background-color:#bcbdff7c;
+ padding:6px 0;
+ position:relative;
+ left:50%;
+ transform:translateX(-50%);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ gap:19px;
+ direction:rtl;
+ cursor: pointer;
+ border-radius:5px;
+}
+.charge_prop {
+ width:22%;
+ height:60px;
+ color:white;
+ border-radius:8px;
+ background-color: #071241;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ font-size:26px;
+ font-weight:300
+}

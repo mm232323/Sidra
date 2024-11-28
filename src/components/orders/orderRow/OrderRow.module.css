@@ -1,0 +1,27 @@
+.order_row {
+ width:89.0972222222%;
+ height:70px;
+ background-color:#ffe1bc7c;
+ padding:6px 0;
+ position:relative;
+ left:50%;
+ transform:translateX(-50%);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ gap:19px;
+ direction:rtl;
+ cursor: pointer;
+}
+.order_prop {
+ width:17.8194444444%;
+ height:60px;
+ color:white;
+ border-radius:8px;
+ background-color: #FFA245;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ font-size:26px;
+ font-weight:300
+}

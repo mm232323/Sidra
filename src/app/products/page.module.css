@@ -1,0 +1,30 @@
+.actions {
+ width:100%;
+ display: flex;
+ gap:15px;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 15px;
+ direction: rtl;
+}
+.actions button {
+ width:28.6111111111%;
+ height:63px;
+ border-radius:9px;
+ background-color:#d0313127;
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ gap:8px;
+ cursor:pointer;
+ transition-duration:.35s;
+ border:none;
+ font-family:'zain';
+ font-size:26px;
+ font-weight:300;
+}
+.products_container {
+ display:flex;
+ flex-direction:column;
+ gap:12px;
+}

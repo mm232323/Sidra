@@ -1,0 +1,19 @@
+.action {
+ width:28.6111111111%;
+ height:63px;
+ border-radius:9px;
+ background-color:#3141d034;
+ color:rgb(4, 4, 36);
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ gap:8px;
+ cursor:pointer;
+ transition-duration:.35s;
+ border:none;
+ font-family:'zain';
+ font-size:26px;
+ font-weight:300;
+ direction: rtl;
+ margin-bottom: 20px;
+}
