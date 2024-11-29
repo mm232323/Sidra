@@ -70,7 +70,6 @@ export async function handleOrderActions(order, state) {
     const products = order.products;
     for (let i = 0; i < products.length; i++) {
       const product = products[i];
-      console.log(product);
       if (product.type == "سدرة") continue;
       const mainProd = mainProds.filter(
         (prod) => product.name == prod.name && product.weight == prod.weight
@@ -185,7 +184,7 @@ export async function setCharge(state, event) {
     const selectedProd = products[i];
     if (
       selectedProd[0] == "الاسم" ||
-      +selectedProd[1] == 0 ||
+      selectedProd[1] == "" ||
       +selectedProd[2] == 0
     )
       errors.push(`product_${i}`);
@@ -216,24 +215,14 @@ export async function setCharge(state, event) {
   }
   if (errors.length) return errors;
   data.totalPrice = totalPrice;
-  const response = await fetch(`${process.env.SERVER_HOST_PORT}/set-charge`, {
+  console.log(data.totalPrice);
+  fetch(`${process.env.SERVER_HOST_PORT}/set-charge`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
     },
   });
-  const response2 = await fetch(
-    `${process.env.SERVER_HOST_PORT}/handle-remained-prods`,
-    {
-      method: "POST",
-      body: JSON.stringify({ prods: products }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  const result = await response2.json();
   return ["done"];
 }
 

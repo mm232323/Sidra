@@ -33,6 +33,7 @@ export default function ChargeForm({ handleClose }) {
       }
       return newProducts;
     });
+    console.log(products);
   };
   const addProduct = () => {
     setProducts((prevProducts) => [
@@ -70,20 +71,18 @@ export default function ChargeForm({ handleClose }) {
           )}
           <div className={styles.product_container}>
             <select
-              onChange={(event) => handleChange(event, idx, "name")}
               className={styles.product_inp}
+              onChange={(event) => handleChange(event, idx, "name")}
               style={
-                state?.includes(`product_${idx}`)
+                state.includes(`product_${idx}`)
                   ? { backgroundColor: "rgba(0,0,0,0.1)", borderColor: "black" }
                   : {}
               }
             >
               <option>الاسم</option>
-              {addedProducts
-                .filter((prod) => prod.type == "product")
-                .map((addedProd) => (
-                  <option key={Math.random() * 1000}>{addedProd.name}</option>
-                ))}
+              {addedProducts.map((prod, idx) => (
+                <option key={idx}>{prod.name}</option>
+              ))}
             </select>
             <input
               placeholder="الكتلة"
