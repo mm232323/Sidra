@@ -242,3 +242,9 @@ export async function getCharges() {
   const charges = await response.json();
   return charges;
 }
+
+export async function getStatics() {
+  const response = await fetch(`${process.env.SERVER_HOST_PORT}/get-statics`);
+  const statics = await response.json();
+  return statics;
+}
