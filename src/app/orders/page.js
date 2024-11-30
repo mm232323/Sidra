@@ -12,6 +12,7 @@ import OrderDetails from "@/components/orders/orderDetails/OrderDetails";
 import OrdersHeader from "@/components/orders/ordersHeader/OrdersHeader";
 export default function Orders() {
   const [toggleOrder, setToggleOrder] = useState(false);
+  const [y, setY] = useState(0);
   const [filters, setFilters] = useState({
     id: "",
     name: "",
@@ -43,8 +44,8 @@ export default function Orders() {
     setFilters(filters);
   };
   const handleSelectedOrder = (order) => {
-    console.log(selectedOrder);
     setSelectedOrder((prevOrder) => order);
+    setY(document.body.scrollTop);
   };
   const selectedOrders = orders.filter((order) => {
     if (filters.id !== "" && order.id !== +filters.id) return false;

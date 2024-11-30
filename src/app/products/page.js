@@ -13,6 +13,7 @@ import ProductDetails from "@/components/products/productDetails/ProductDetails"
 import OfferDetails from "@/components/products/offerDetails/OfferDetails";
 export default function ProductsPage() {
   const [statue, setStatue] = useState("none");
+  const [y, setY] = useState(0);
   const [prods, setProds] = useState([]);
   const [selectedProd, setSelectedProd] = useState(null);
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function ProductsPage() {
   const handleClose = () => setStatue("none");
   const handleCloseProd = () => setSelectedProd(null);
   const handleSelectProd = (prod) => {
+    setY(window.scrollY);
     setSelectedProd(prod);
   };
   return (
@@ -78,7 +80,11 @@ export default function ProductsPage() {
           />
         ))}
       </div>
-      <Model isOpened={selectedProd !== null} onhandleClose={handleCloseProd}>
+      <Model
+        isOpened={selectedProd !== null}
+        onhandleClose={handleCloseProd}
+        y={y}
+      >
         {selectedProd && selectedProd.type == "product" ? (
           <ProductDetails product={selectedProd} />
         ) : selectedProd && selectedProd.type == "offer" ? (

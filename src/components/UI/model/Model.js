@@ -3,18 +3,18 @@ import React, { useState } from "react";
 import styles from "./Model.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
-export default function Model({ isOpened, children, onhandleClose }) {
+export default function Model({ isOpened, children, onhandleClose, y }) {
   return (
     <AnimatePresence>
       {isOpened && (
-        <div>
-          <motion.div
-            className={styles.back_shadow}
-            variants={{ show: { opacity: 1 }, hide: { opacity: 0 } }}
-            initial="hide"
-            animate="show"
-            exit="hide"
-          />
+        <motion.div
+          className={styles.back_shadow}
+          variants={{ show: { opacity: 1 }, hide: { opacity: 0 } }}
+          initial="hide"
+          animate="show"
+          exit="hide"
+          style={{ top: y }}
+        >
           <motion.div
             className={styles.model}
             variants={{
@@ -33,7 +33,7 @@ export default function Model({ isOpened, children, onhandleClose }) {
             />
             {children}
           </motion.div>
-        </div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
