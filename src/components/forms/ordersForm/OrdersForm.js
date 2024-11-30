@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./OrdersForm.module.css";
 import { useState, useRef, useEffect } from "react";
 import { getProducts, setOrder } from "../../../../actions/main";
+import { FaPlus } from "react-icons/fa6";
 export default function OrdersForm({ onHandleClose }) {
   const butRef = useRef(null);
   const inpRef = useRef(null);
